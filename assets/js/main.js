@@ -4,17 +4,6 @@
 (function () {
   "use strict";
 
-  // Navbar on scrolling
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
-      $('#header').fadeIn('slow').css('display', 'block');
-      $('#footer').fadeIn('slow').css('display', 'block');
-    } else {
-      $('#header').fadeOut('slow').css('display', 'none');
-      $('#footer').fadeOut('slow').css('display', 'none');
-    }
-  });
-
   /**
    * Easy selector helper function
    */
@@ -111,6 +100,37 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+  
+  /**
+   * Header hide
+   */
+  let header = select('#header')
+  if (header) {
+    const toggleheader = () => {
+      if (window.scrollY > 100) {
+        header.classList.add('active')
+      } else {
+        header.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleheader)
+    onscroll(document, toggleheader)
+  }
+    /**
+   * Footer hide
+   */
+    let footer = select('#footer')
+    if (footer) {
+      const togglefooter = () => {
+        if (window.scrollY > 100) {
+          footer.classList.add('active')
+        } else {
+          footer.classList.remove('active')
+        }
+      }
+      window.addEventListener('load', togglefooter)
+      onscroll(document, togglefooter)
+    }
 
   /**
    * Mobile nav toggle
