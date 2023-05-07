@@ -307,3 +307,26 @@
 $(window).on("load", function () {
   $(".loader-wrapper").fadeOut("slow");
 });
+
+  /**
+   * Contact Form Submit
+   */
+
+  $("#contact-form").submit((e)=>{
+    e.preventDefault()
+    $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbzuS4eVSxMsIcx5avpIWpfz5PVnTCHxiMaBYGNu-ZcHbCqzdUbFCaX2nW4WxyByeK1n5Q/exec",
+        data:$("#contact-form").serialize(),
+        method:"post",
+        success:function (response){
+            alert("Form submitted successfully")
+            window.location.reload()
+            //window.location.href="https://google.com"
+        },
+        error:function (err){
+            alert("Something Error")
+
+        }
+    })
+})
+
