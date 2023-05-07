@@ -117,6 +117,21 @@
     onscroll(document, toggleheader)
   }
   /**
+   * mobile icon hide
+   */
+  let iconmob = select('.mobile-nav-toggle ')
+  if (iconmob) {
+    const toggleiconmob = () => {
+      if (window.scrollY > 100) {
+        iconmob.classList.add('active')
+      } else {
+        iconmob.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleiconmob)
+    onscroll(document, toggleiconmob)
+  }
+  /**
  * Footer hide
  */
   let footer = select('#footer')

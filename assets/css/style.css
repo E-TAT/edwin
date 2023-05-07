@@ -228,6 +228,8 @@ h6 {
 
 /* Mobile Navigation . */
 .mobile-nav-toggle {
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   right: 15px;
   top: 15px;
@@ -246,6 +248,11 @@ h6 {
   line-height: 0;
   border-radius: 50px;
   cursor: pointer;
+}
+
+.mobile-nav-toggle.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .mobile-nav-active {
