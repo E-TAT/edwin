@@ -100,7 +100,7 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-  
+
   /**
    * Header hide
    */
@@ -116,21 +116,21 @@
     window.addEventListener('load', toggleheader)
     onscroll(document, toggleheader)
   }
-    /**
-   * Footer hide
-   */
-    let footer = select('#footer')
-    if (footer) {
-      const togglefooter = () => {
-        if (window.scrollY > 100) {
-          footer.classList.add('active')
-        } else {
-          footer.classList.remove('active')
-        }
+  /**
+ * Footer hide
+ */
+  let footer = select('#footer')
+  if (footer) {
+    const togglefooter = () => {
+      if (window.scrollY > 100) {
+        footer.classList.add('active')
+      } else {
+        footer.classList.remove('active')
       }
-      window.addEventListener('load', togglefooter)
-      onscroll(document, togglefooter)
     }
+    window.addEventListener('load', togglefooter)
+    onscroll(document, togglefooter)
+  }
 
   /**
    * Mobile nav toggle

@@ -322,35 +322,36 @@
             </div>
           </div>
           <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <form class="contact-form">
+            <!--<form class="contact-form" method="post" action="./assets/php/mail.php">-->
+            <form class="contact-form" method="post">
               <div class="row g-3" data-aos="fade-up">
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                    <label for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                    <label name="name">Your Name</label>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-floating">
-                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    <label for="email">Your Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                    <label name="email">Your Email</label>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="form-floating">
-                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                    <label name="subject">Subject</label>
                   </div>
                 </div>
                 <div class="col-12">
                   <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                    <textarea class="form-control" placeholder="Leave a message here" name="message" id="message"
                       style="height: 100px"></textarea>
-                    <label for="message">Message</label>
+                    <label name="message">Message</label>
                   </div>
                 </div>
                 <div class="col-12">
-                  <button class="button-49 y-3 px-5" role="button" type="submit">Send</button>
+                  <button class="button-49 y-3 px-5" role="button" type="submit" onclick="consuccess()">Send</button>
                 </div>
               </div>
             </form>
@@ -386,7 +387,7 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  
+
   <script src="assets/js/main.js"></script>
 
 </body>
