@@ -336,7 +336,7 @@ $(window).on("load", function () {
   var subject = document.getElementById("subject").value;
   var message = document.getElementById("message").value;
   
-  var url = "https://wa.me/number?text="
+  var url = "https://wa.me/+91number?text="
   +"*Name :* "+name+"%0a"
   +"*Email :* "+email+"%0a"
   +"*Subject :* "+subject+"%0a"
